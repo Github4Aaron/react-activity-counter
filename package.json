@@ -1,0 +1,25 @@
+{
+  "name": "react-activity-counter",
+  "version": "1.0.0",
+  "description": "An activity counter using React JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "httpster -d ./dist -p 3200"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Github4Aaron/react-activity-counter.git"
+  },
+  "author": "Aaron Strouse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Github4Aaron/react-activity-counter/issues"
+  },
+  "homepage": "https://github.com/Github4Aaron/react-activity-counter#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-latest": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0"
+  }
+}
