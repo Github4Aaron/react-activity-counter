@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://fb.me/react-15.1.0.js"></script>
-    <script src="https://fb.me/react-dom-15.1.0.js"></script>
     <meta charset="UTF-8">
-    <title>Hello World with React</title>
+    <title>Ski Day Counter</title>
 </head>
 <body>
     <div id="react-container"></div>
-    <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript" src="assets/bundle.js"></script>
 </body>
 </html>
-
-<!-- 
-Changes: (1) removed Babel cdn reference, (2) changed text type to javascript
-(3) src file is bundle js now, and added babel cli to do static transpiling.
-This handles transpiling before scripts hit the browser.
-
-  "npm install --save-dev babel-cli" adds package to dev dependencies
-  added .babelrc file and moved index.js to src folder
-
-added babel presets via npm install
-babel ./src/index.js --out-file ./dist/bundle.js and this created a bundle.js file
-added start command to package.json
--->
