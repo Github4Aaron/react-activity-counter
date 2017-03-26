@@ -8,12 +8,16 @@ const { render } = ReactDOM
 
 
   
-render( //w/out Babel, tag on line 10 throws an error of "unexpected token"
+render( //w/out Babel, tag on line 12 throws an error of "unexpected token"
     <h1 id="title"
         classname='header'
         style={{backgroundColor: 'orange', color: 'white', fontFamily: 'verdana'}}>
-        Hello World
+        Hello 
     </h1>,
   
     document.getElementById('react-container')
 )
+
+// Tried Babel 6.1.19, receive error of reactjs Cannot read property 'keys' of undefined
+// Tried Babel 5.8.24, error above is gone but not resolving initial syntax error. 
+
