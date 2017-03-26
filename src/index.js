@@ -1,10 +1,15 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { SkiDayCount } from './components/SkiDayCount'
+import { hello, goodbye } from './lib'
 
-window.React = React
+
 
 render(
-	<SkiDayCount />,
+	<div>
+		{hello}
+		{goodbye}
+	</div>,
 	document.getElementById('react-container')
 )
+
+// loading of JSON data via webpack & json loader
