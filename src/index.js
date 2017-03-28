@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { SkiDayCount1 } from './components/SkiDayCount-createClass.js'
+import { SkiDayCount2 } from './components/SkiDayCount-ES6.js'
 
 
 window.React = React
 
 
 render(
-	<SkiDayCount1 />,
+	<SkiDayCount2 />,
 	document.getElementById('react-container')
 )
 
