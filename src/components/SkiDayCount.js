@@ -1,4 +1,4 @@
-import { Component } from 'react'
+
 import '../stylesheets/ui.scss'
 
 const percentToDecimal = (decimal) => {
@@ -9,24 +9,24 @@ const calcGoalProgress = (total, goal) => {
 		return percentToDecimal(total/goal)
 	}
 
-export const SkiDayCount = (props) => (
+export const SkiDayCount = ({total, powder, backcountry, goal}) => (
 		<div className="ski-day-count">
 			<div className="total-days">
-				<span>{props.total}</span>
+				<span>{total}</span>
 				<span>days</span>
 			</div>
 			<div className="powder-days">
-				<span>{props.powder}</span>
+				<span>{powder}</span>
 				<span>days</span>
 			</div>
 			<div className="backcountry-days">
-				<span>{props.backcountry}</span>
+				<span>{backcountry}</span>
 				<span>hiking day</span>
 			</div>
 			<div>
 				<span>{calcGoalProgress( 
-						props.total,
-						props.goal)}</span>
+						total,
+						goal)}</span>
 			</div>
 		</div>
 	)
