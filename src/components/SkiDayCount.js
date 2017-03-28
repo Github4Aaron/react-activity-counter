@@ -13,7 +13,10 @@ const calcGoalProgress = (total, goal) => {
 		return percentToDecimal(total/goal)
 	}
 
-export const SkiDayCount = ({total, powder, backcountry, goal}) => (
+export const SkiDayCount = ({total=70, 
+							powder=20, 
+							backcountry=10, 
+							goal=100}) => (
 		<div className="ski-day-count">
 			<div className="total-days">
 				<span>{total}</span>
@@ -38,12 +41,7 @@ export const SkiDayCount = ({total, powder, backcountry, goal}) => (
 		</div>
 	)
 	
-SkiDayCount.defaultProps = {
-  total: 50,
-  powder: 10,
-  backcountry: 15,
-  goal: 75
-}
+
 
 // 3 ways to make component: (1) createClass, (2) ES6 / class extends, (3) stateless functions component.
 //Stateless functions do NOT have access to "this", so properties are passed directly into the function. 
