@@ -2,7 +2,7 @@ import React from 'react'
 import '../stylesheets/ui.scss'
 
 export const SkiDayCount = React.createClass({
-	percentToDecimal(decimal) {
+	percentToDecimal(decimal) {  //these methods are local to this component
 		return((decimal * 100) + '%')
 	},
 	calcGoalProgress(total, goal) {
@@ -25,7 +25,7 @@ export const SkiDayCount = React.createClass({
 					<span>hiking day</span>
 				</div>
 				<div>
-					<span>{this.calcGoalProgress(
+					<span>{this.calcGoalProgress( //props are passed in as arguments to function
 							this.props.total,
 							this.props.goal)}</span>
 				</div>
