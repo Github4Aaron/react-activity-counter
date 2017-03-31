@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { SkiDayCount } from './components/SkiDayCount'
+import { SkiDayCount1 } from './components/SkiDayCount-createClass.js'
 
 
 window.React = React
 
 
-render(
-	<SkiDayCount />,
+render(					//if total isRequired and then removed, it will throw an error
+	<SkiDayCount1 />, //if total is "string", it will produce an invalid prop type
 	document.getElementById('react-container')
 )
 
