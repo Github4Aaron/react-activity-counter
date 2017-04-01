@@ -4,6 +4,7 @@ import Terrain from 'react-icons/lib/md/terrain'
 import SnowFlake from 'react-icons/lib/ti/weather-snow'
 import Calendar from 'react-icons/lib/fa/calendar'
 import { SkiDayList } from './SkiDayList'
+import { PropTypes } from 'react'
 
 const percentToDecimal = (decimal) => {
 	return((decimal * 100) + '%')
@@ -40,7 +41,11 @@ export const SkiDayCount = ({total=70,
 			</div>
 		</div>
 	)
-	
+	SkiDayCount.propTypes = {
+  total: PropTypes.number,
+  powder: PropTypes.number,
+  backcountry: PropTypes.number
+}
 
 
 // 3 ways to make component: (1) createClass, (2) ES6 / class extends, (3) stateless functions component.
