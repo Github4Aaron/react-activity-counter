@@ -9,7 +9,7 @@ window.React = React
 
 
 render(
-	<SkiDayList days="lots of days"/>,
+	<SkiDayList days={[]}/>,
 	
 	// {
 	// 	[
