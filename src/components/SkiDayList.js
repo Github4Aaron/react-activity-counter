@@ -27,7 +27,19 @@ export const SkiDayList =({days}) => ( // JSX table below
 )
 
 SkiDayList.propTypes = {
-    days: PropTypes.array
+    days: function(props) {
+        if(!Array.isArray(props.days)) { // is props.days an array?
+            return new Error( //if not, returns this error
+                "SkiDayList should be an array"
+            )
+        } else if(!props.days.length) { // Are there any items in this array
+            return new Error(
+                "SkiDayList must have at least one record"
+            )
+        } else {  // if make it through both checks above, return null.
+            return null
+        }
+    }
 }
 
 // Optional rendering of map function using the spread operator.
