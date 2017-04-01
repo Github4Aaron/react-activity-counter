@@ -1,42 +1,40 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { SkiDayCount1 } from './components/SkiDayCount-createClass.js'
-import { SkiDayCount2 } from './components/SkiDayCount-ES6.js'
 import { SkiDayCount } from './components/SkiDayCount'
+import { PropTypes } from 'react'
+import { SkiDayList } from './components/SkiDayList'
+
 window.React = React
 
-render(					//if total isRequired and then removed, it will throw an error
-	<SkiDayCount  backcountry={12}/>, //if total is "string", it will produce an invalid prop type
+
+
+render(
+	<SkiDayList days={
+		[
+			{ // the objects in this array will populate the rows in the table
+				resort: "Squaw Valley",
+				date: new Date ("1/2/2016"),
+				powder: true,
+				backCountry: false
+			}, 
+			{ 
+				resort: "Kirkwood",
+				date: new Date ("3/28/2016"),
+				powder: false,
+				backCountry: false
+			},
+			{ 
+				resort: "Mt Tallac",
+				date: new Date ("4/2/2016"),
+				powder: true,
+				backCountry: false
+			},
+			
+		]
+
+	}/>,
 	document.getElementById('react-container')
 )
-
-// render(
-// 	<SkiDayList days={
-// 		[
-// 			{ // the objects in this array will populate the rows in the table
-// 				resort: "Squaw Valley",
-// 				date: new Date ("1/2/2016"),
-// 				powder: true,
-// 				backCountry: false
-// 			}, 
-// 			{ 
-// 				resort: "Kirkwood",
-// 				date: new Date ("3/28/2016"),
-// 				powder: false,
-// 				backCountry: false
-// 			},
-// 			{ 
-// 				resort: "Mt Tallac",
-// 				date: new Date ("4/2/2016"),
-// 				powder: true,
-// 				backCountry: false
-// 			},
-			
-// 		]
-
-// 	}/>,
-// 	document.getElementById('react-container')
-// )
 
 //properties are an object and every property is a key. 
 //Dynamic data supplied by this.props
