@@ -3,38 +3,16 @@ import { render } from 'react-dom'
 import { SkiDayCount } from './components/SkiDayCount'
 import { PropTypes } from 'react'
 import { SkiDayList } from './components/SkiDayList'
+import { App } from './components/App'
+
 
 window.React = React
 
 
 
 render(
-	<SkiDayList days={[]}/>,
+	<App />,
 	
-	// {
-	// 	[
-	// 		{ // the objects in this array will populate the rows in the table
-	// 			resort: "Squaw Valley",
-	// 			date: new Date ("1/2/2016"),
-	// 			powder: true,
-	// 			backCountry: false
-	// 		}, 
-	// 		{ 
-	// 			resort: "Kirkwood",
-	// 			date: new Date ("3/28/2016"),
-	// 			powder: false,
-	// 			backCountry: false
-	// 		},
-	// 		{ 
-	// 			resort: "Mt Tallac",
-	// 			date: new Date ("4/2/2016"),
-	// 			powder: true,
-	// 			backCountry: false
-	// 		},
-			
-	// 	]
-
-	// }/>,
 	document.getElementById('react-container')
 )
 
