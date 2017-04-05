@@ -1,4 +1,6 @@
 import { createClass } from 'react'
+import { SkiDayList } from './SkiDayList'
+import { SkiDayCount } from './SkiDayCount'
 
 export const App = createClass({
     //State represents all the possible conditions of your application (editing, loggedin, logged out)
@@ -29,12 +31,33 @@ export const App = createClass({
 			
 		]
         }
+
+
     },
+	countDays(filter) {
+		return this.state.allSkiDays.filter(function(day) { // callback function takes in day as argument
+			if (filter) {
+				day [filter]
+			} else {
+				return day
+			}
+		}).length
+	},
+
     render() { 
         return ( //this will render first position in the array
             <div className="app"> 
-                {this.state.allSkiDays[0]["resort"]} 
+                <SkiDayList days={this.state.allSkiDays}/> 
+				<SkiDayCount total={this.countDays()}
+							 powder={this.countDays(
+								 	"powder"
+							 )}
+							 backcountry={this.countDays(
+								  	"backcountry"
+							 )}
+							 />
             </div>
         )
     }
 })
+//app is rendering two componenets, SkiDayList and SkiDayCount. 
