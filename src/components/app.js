@@ -1,15 +1,17 @@
+import { Component } from 'react'
 import { createClass } from 'react'
 import { SkiDayList } from './SkiDayList'
 import { SkiDayCount } from './SkiDayCount'
 
-export const App = createClass({
+export class App extends Component {
     //State represents all the possible conditions of your application (editing, loggedin, logged out)
     //getInitialState: how to initialize state as default.
     //In react you want to identify minimal representation of state
 
-    getInitialState() { //instead of holding days in props, we are holding them in State
-        return {
-            allSkiDays: [
+	constructor (props) {
+		super(props)
+		this.state = {
+			allSkiDays: [
 			{ // the objects in this array will populate the rows in the table
 				resort: "Squaw Valley",
 				date: new Date ("1/2/2016"),
@@ -27,18 +29,21 @@ export const App = createClass({
 				date: new Date ("4/2/2016"),
 				powder: true,
 				backCountry: false
-			},
+			}
 			
 		]
-        }
+		}
+	}
+
+    
 
 
-    },
+    
 	countDays(filter) {
 		const { allSkiDays } = this.state
 		return allSkiDays.filter(
 			(day) => (filter) ? day[filter] :day).length	
-	},
+	}
 
     render() { 
         return ( //this will render first position in the array
@@ -55,5 +60,6 @@ export const App = createClass({
             </div>
         )
     }
-})
+}
+
 //app is rendering two componenets, SkiDayList and SkiDayCount. 
